@@ -39,7 +39,7 @@ function GroupList({searchGroup}) {
           Authorization:`Bearer ${userData.data.token}`
         }
       }
-      axios.get("http://localhost:5000/chat/fetchGroups",config).then(data=>{
+      axios.get("https://chat-app-backend-gcmr.onrender.com//chat/fetchGroups",config).then(data=>{
         setGroups(data.data)
         setIsLoaded(true)
       })

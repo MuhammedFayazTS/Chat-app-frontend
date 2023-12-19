@@ -56,7 +56,7 @@ export const fetchGroupsSearchAPI = async (search) =>{
 export const exitGroupAPI = async (group) =>{
   return await CommonAPI("delete",`${BASE_URL}/chat/exitgroup`,group,config)
 }
-// await axios.post('http://localhost:5000/user/exitgroup',{ chatId, userId },config)
+// await axios.post('https://chat-app-backend-gcmr.onrender.com//user/exitgroup',{ chatId, userId },config)
 //       .then(
 //         // Update the state after the API call is successful
 //         setRefresh(prevRefresh => !prevRefresh),

@@ -37,7 +37,7 @@ function UsersList({searchUser}) {
             Authorization: `Bearer ${user.token}`,
           },
         };  
-        axios.get("http://localhost:5000/chat/", config).then((response) => {
+        axios.get("https://chat-app-backend-gcmr.onrender.com//chat/", config).then((response) => {
           setConversations(response.data);
           setRefresh(!refresh)
           setloaded(true)

@@ -30,7 +30,7 @@ import Welcome from '../Common Components/Welcome';
 import { myContext } from '../../Context/myContext';
 const chatBg = [chatBgDefaultLight,chatBgDefaultdark]
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chat-app-backend-gcmr.onrender.com/";
 var socket,selectedChatCompare;
 
 function ChatArea({setView,view,isGroup}) {
@@ -113,7 +113,7 @@ function ChatArea({setView,view,isGroup}) {
     };
     const {data} = await axios
       .post(
-        "http://localhost:5000/message/",
+        "https://chat-app-backend-gcmr.onrender.com//message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -147,7 +147,7 @@ function ChatArea({setView,view,isGroup}) {
         },
       };
       axios
-        .get("http://localhost:5000/message/" + chat_id, config)
+        .get("https://chat-app-backend-gcmr.onrender.com//message/" + chat_id, config)
         .then(({ data }) => {
           setAllMessages(data);
           setRefresh(!refresh)

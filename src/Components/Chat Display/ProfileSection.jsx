@@ -52,7 +52,7 @@ function ProfileSection({view,setView,isGroup}) {
          Authorization:`Bearer ${userData.data.token}`
         }
       }
-      await axios.post('http://localhost:5000/chat/exitgroup',{ chatId, userId },config)
+      await axios.post('https://chat-app-backend-gcmr.onrender.com//chat/exitgroup',{ chatId, userId },config)
       .then(
         // Update the state after the API call is successful
         setRefresh(prevRefresh => !prevRefresh),

@@ -73,7 +73,7 @@ function Register() {
           password:data.password,
           pfp:pfp
         }
-        const response = await axios.post('http://localhost:5000/user/register',Postdata,config)
+        const response = await axios.post('https://chat-app-backend-gcmr.onrender.com//user/register',Postdata,config)
         setSignInStatus({msg:'Success',key:Math.random()})
         localStorage.setItem("userData",JSON.stringify(response))
         setLoaded(false)
